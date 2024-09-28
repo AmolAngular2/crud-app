@@ -1,0 +1,42 @@
+<h2>Two way Data Binding</h2>
+
+<div>
+    <label for="id1">First Name</label>
+    <input type="text" name="fName" id="id1" [value]="firstName" (input)="fNameChange($event)">
+</div>
+{{firstName}}
+<br>
+<div>
+    <button type="button" (click)="changeName()">Change Name</button>
+</div>
+
+
+<div>
+    <label for="id1">First Name</label>
+    <input type="text" name="fName" id="id1" [(ngModel)]="firstName">
+</div>
+<br>
+<div>
+    <label for="id2">Mobile No</label>
+    <input type="text" name="mobNo" id="id2" [(ngModel)]="mobileNo">
+</div>
+<br>
+<button type="button" (click)="save()">Save</button>
+
+{{firstName}}
+
+<hr>
+<h3>Product Form</h3>
+<div>
+    <label for="id1">Price</label><br>
+    <input type="text" name="price" id="id1" [(ngModel)]="productObj.price" (ngModelChange)="calculateTotalPrice()">
+</div>
+<div>
+    <label for="id2">Quantity</label><br>
+    <input type="text" name="quantity" id="id2" [(ngModel)]="productObj.quantity" (ngModelChange)="calculateTotalPrice()">
+</div>
+<div>
+    <label for="id3">Total Price</label><br>
+    <input type="text" name="totPrice" id="id3" disabled [(ngModel)]="productObj.totalPrice">
+</div>
+<button type="button" (click)="saveProduct()">Save</button>

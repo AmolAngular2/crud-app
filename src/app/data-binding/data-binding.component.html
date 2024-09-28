@@ -1,0 +1,55 @@
+<h2>One Way Data Binding :</h2>
+<!-- <h2>Hello, {{userName}}</h2>
+<h3>Your registered email ID : {{userEmailId}}</h3>
+
+<p>Employee Name : {{employeeObj.employeeName}}</p>
+<p>Designation : {{employeeObj.designation}} </p>
+<p>Skills : {{employeeObj.skills[0]}}, {{employeeObj.skills[1]}} </p>
+
+<p>{{2+4}}</p>
+
+<img [src]="imgPath" alt="" height="200" width="200"> <br><br>
+
+<img src="{{imgPath}}" alt="" height="200" width="200"> <br><br>
+
+
+<button type="submit" [disabled]="isDisabled">Save</button>
+<br>
+<hr>
+
+<button type="submit" disabled="{{isBtnDisabled}}">Save</button>
+<br> -->
+
+
+<button type="button" (click)="btnClick()">Click Me</button>
+<br>
+<br>
+<hr>
+
+
+<button (click)="increment()">Increment</button>
+  <span class="demo">{{counter}}</span> 
+<button (click)="decrement()">Decrement</button>
+
+<br>
+<hr>
+<label for="id1">First Name</label>
+<!-- <input type="text" name="fName" id="id1" (change)="modifyFName()"> -->
+<input type="text" name="fName" id="id1" (change)="modifyFName($event)">
+<br>
+
+<p>First Name : {{firstName}}</p>
+<hr>
+<label for="id2">Price</label> <br>
+<input type="text" name="pPrice" id="id1" (input)="collectPrice($event)"> <br>
+
+<label for="id2">Quantity</label><br>
+<input type="text" name="quantity" id="id2" (input)="collectQuantity($event)"> <br> <br>
+
+<button type="button"(click)="calculateTotalPrice()">Calculate</button>
+
+<h3>Total Price  : {{totalPrice}}</h3>
+
+
+
+

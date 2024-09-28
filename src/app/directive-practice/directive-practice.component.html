@@ -1,0 +1,44 @@
+
+<h3>NgIf Example</h3>
+<div *ngIf="age <= 18">
+    <h3>You are Eligible For vote</h3>
+</div>
+
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, eveniet, excepturi magni numquam molestiae ipsum
+    debitis illum voluptatem maiores neque tempora aliquam, fugit doloremque explicabo illo. Sit vitae eos iusto!</p>
+
+<p *ngIf="isShow">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, similique molestias pariatur est quaerat labore
+    placeat eligendi repellendus voluptatem saepe aliquid ex delectus in quae quam deserunt tenetur id officiis!</p>
+<button type="button" *ngIf="!isShow" (click)="displayMoreContent()">Read More</button> &nbsp;
+<button type="button" *ngIf="isShow" (click)="removeContent()">Hide</button>
+
+<hr>
+
+<!-- <h3>NgIf Else Example</h3>
+
+<div *ngIf="!isLoggedIn;else logoutBlock">
+    <h1>LogIn</h1>
+    <button  type="button" (click)="login()">Login</button> &nbsp;
+</div>
+
+<ng-template #logoutBlock>
+    <h1>LogOut</h1>
+    <button type="button" (click)="logout()">Log Out</button>
+</ng-template> -->
+
+<hr>
+
+<h3>NgIfThen Else Block</h3>
+
+<div *ngIf="!isLoggedIn;then loginBlock ; else logoutBlock"></div>
+
+<ng-template #loginBlock>
+    <h1>LogIn</h1>
+    <button  type="button" (click)="login()">Login</button> &nbsp;
+</ng-template>
+
+<ng-template #logoutBlock>
+    <h1>LogOut</h1>
+    <button type="button" (click)="logout()">Log Out</button>
+</ng-template>

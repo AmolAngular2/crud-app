@@ -1,0 +1,63 @@
+<h4>Structural Directive :- *ngFor</h4>
+
+
+<!-- <h4>List Of Courses :- </h4> -->
+<!-- <ul>
+    <li *ngFor="let item of courses">{{item}}</li>
+</ul> -->
+
+<!-- using Index -->
+<!-- <ul>
+    <li *ngFor="let item of courses;let i=index"> {{i+1}}-{{item}}</li>
+</ul> -->
+
+<div class="container">
+    <table class="table table-bordered text-center">
+        <thead>
+            <tr>
+                <th scope="col">Sr No</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor="let product of products;let i=index" >
+            <th>{{i+1}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr> -->
+
+
+          <!-- ngClass -->
+          <!-- <tr *ngFor="let product of products;let i=index;let f=first" [ngClass]="{'bg-primary':f,'bg-secondary':product.quantity > 2}">
+            <th>{{i+1}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr> -->
+
+
+          <!-- ng-Style -->
+          <tr *ngFor="let product of products;let i=index" [ngStyle]="{'background-color':product.price >50000 ? 'gray' : 'yellow'}">
+            <th>{{i+1}}</th>
+            <td>{{product.productName}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.quantity}}</td>
+          </tr>
+
+            <!--  -->
+            <!-- <ng-container *ngFor="let product of products;let i=index">
+                <tr *ngIf="product.price >= 50000">
+                    <th>{{i+1}}</th>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.price}}</td>
+                    <td>{{product.quantity}}</td>
+                </tr>
+            </ng-container> -->
+
+            <!--  -->
+        </tbody>
+    </table>
+</div>
