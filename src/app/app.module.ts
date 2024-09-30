@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { DirectivePracticeComponent } from './directive-practice/directive-practice.component';
 import { StructuralDirectComponent } from './structural-direct/structural-direct.component';
 import { NgswitchExampleComponent } from './ngswitch-example/ngswitch-example.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { NgswitchExampleComponent } from './ngswitch-example/ngswitch-example.co
     TwoWayDbComponent,
     DirectivePracticeComponent,
     StructuralDirectComponent,
-    NgswitchExampleComponent
+    NgswitchExampleComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
